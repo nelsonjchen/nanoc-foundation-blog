@@ -32,3 +32,8 @@ gem 'nanoc-image-compressor'
 
 gem 'nanoc-sprockets-filter'
 
+gem 'sprockets-sass'
+
+gem 'sprockets-helpers'
+
+gem 'uglifier'

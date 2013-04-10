@@ -1,1 +1,2 @@
-//= require "foundation"
+//= require foundation
+

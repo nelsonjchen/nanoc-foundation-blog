@@ -5,6 +5,7 @@ require 'sass'
 require 'uglifier'
 require 'sprockets-sass'
 require 'nanoc-sprockets-filter'
+require 'zurb-foundation'
 
 Nanoc::Helpers::Sprockets.configure do |config|
   config.environment = Nanoc::Filters::Sprockets.environment

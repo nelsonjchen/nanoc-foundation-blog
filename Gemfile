@@ -30,7 +30,7 @@ gem 'fog'
 
 gem 'nanoc-image-compressor'
 
-gem 'nanoc-sprockets-filter'
+gem 'nanoc-sprockets-filter',  :git => 'https://github.com/crazysim/nanoc-sprockets-filter.git'
 
 gem 'sprockets-sass'
 

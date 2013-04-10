@@ -13,6 +13,12 @@
 #   item, use the pattern “/about/*/”; “/about/*” will also select the parent,
 #   because “*” matches zero or more characters.
 
+compile %r{/assets/(stylesheets|javascripts)/.+/} do
+  filter :sprockets, {
+      css_compressor: :scss,
+  }
+end
+
 compile '/stylesheet/' do
   # don’t filter or layout
 end
@@ -38,6 +44,10 @@ route '*' do
     # Write item with identifier /foo/ to /foo/index.html
     item.identifier + 'index.html'
   end
+end
+
+route '/assets/*/' do
+  Nanoc::Helpers::Sprockets.asset_path(item)
 end
 
 layout '*', :erb

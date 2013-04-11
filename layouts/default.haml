@@ -15,8 +15,8 @@
     = yield
     :javascript
       document.write('<script src=' +
-      ('__proto__' in {} ? 'js/vendor/zepto' : 'js/vendor/jquery') +
+      ('__proto__' in {} ? 'assets/javascripts/foundation/vendor-zepto' : 'assets/javascripts/foundation/vendor-jquery') +
       '.js><\/script>')
-    %script{:src => 'js/foundation/foundation.js'}
+    %script{:src => 'assets/javascripts/foundation.js'}
     :javascript
       $(document).foundation();

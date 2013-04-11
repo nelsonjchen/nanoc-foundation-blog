@@ -32,8 +32,4 @@ gem 'nanoc-image-compressor'
 
 gem 'nanoc-javascript-concatenator'
 
-gem 'sprockets-sass'
-
-gem 'sprockets-helpers'
-
 gem 'uglifier'

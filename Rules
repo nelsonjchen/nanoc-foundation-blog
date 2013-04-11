@@ -16,6 +16,7 @@
 compile '/assets/javascripts/*' do
   filter :erb
   filter :concat_js
+  #filter :uglify_js
 end
 
 compile '/stylesheet/' do

@@ -2,5 +2,13 @@
 # before nanoc starts compiling.
 
 require 'nanoc/filters/javascript_concatenator'
+include Nanoc::Helpers::Rendering
+
+unless defined? LOADED_DEFAULT_CONFIG
+  LOADED_DEFAULT_CONFIG = true
+
+  require 'compass'
+  Compass.add_project_configuration 'compass/config.rb'
+end
 
 

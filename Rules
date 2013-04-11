@@ -1,5 +1,8 @@
 #!/usr/bin/env ruby
 
+require 'compass'
+require 'zurb-foundation'
+
 # A few helpful tips about the Rules file:
 #
 # * The string given to #compile and #route are matching patterns for
@@ -13,14 +16,14 @@
 #   item, use the pattern “/about/*/”; “/about/*” will also select the parent,
 #   because “*” matches zero or more characters.
 
+compile '/assets/stylesheets/*/' do
+  filter :sass, Compass.sass_engine_options
+end
+
 compile '/assets/javascripts/*' do
   filter :erb
   filter :concat_js
   #filter :uglify_js
-end
-
-compile '/stylesheet/' do
-  # don’t filter or layout
 end
 
 compile '*' do
@@ -34,6 +37,15 @@ end
 
 route '/stylesheet/' do
   '/style.css'
+end
+
+# Do not write partials
+route '/assets/stylesheets/_*/' do
+  nil
+end
+
+route '/assets/stylesheets/*/' do
+  item.identifier.chop + '.css'
 end
 
 route '/assets/javascripts/*' do

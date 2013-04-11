@@ -30,7 +30,11 @@ compile '*' do
   if item.binary?
     # don’t filter binary items
   else
-    filter :erb
+    if item[:extension] == 'haml'
+      filter :haml
+    else
+      filter :erb
+    end
     layout 'default'
   end
 end
@@ -63,4 +67,4 @@ route '*' do
 end
 
 
-layout '*', :erb
+layout '*', :haml

@@ -1,3 +1,14 @@
-<% foundation_dir = Gem::Specification.find_by_name('zurb-foundation').gem_dir %>
-//= require <%= foundation_dir + '/js/foundation/foundation.js' %>
+// This file concatenates javascripts from gem distributed frameworks such as zurb-foundation.
+// jQuery/Zepto and jQuery/Zepto belong at the bottom of the body. Modernizer goes into the head.
+// Thus, modernizer is not included here
+
+// You may want to pass the output of this through a minimizer.
+
+// To enable/disable certain javascripts, remove the DISABLED string
+
+<% foundation_js_dir = Gem::Specification.find_by_name('zurb-foundation').gem_dir + '/js/' %>
+
+//= require <%= foundation_js_dir + 'vendor/jquery.js' %>
+//= DISABLEDrequire <%= foundation_js_dir + 'vendor/zepto.js' %>
+//= require <%= foundation_js_dir + 'foundation/foundation.js' %>
 

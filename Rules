@@ -35,7 +35,7 @@ route '/stylesheet/' do
   '/style.css'
 end
 
-route '/assets/javascripts/' do
+route '/assets/javascripts/*' do
   item.identifier.chop + '.js'
 end
 

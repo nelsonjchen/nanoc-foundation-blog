@@ -31,7 +31,6 @@ preprocess do
 end
 
 # Styling and Javascript Asset Rules
-
 compile '/assets/stylesheets/*/' do
   filter :sass, Compass.sass_engine_options
 end
@@ -42,7 +41,7 @@ compile '/assets/javascripts/*' do
   #filter :uglify_js
 end
 
-# Do not write partials
+## Do not write partials
 route '/assets/stylesheets/_*/' do
   nil
 end
@@ -55,13 +54,13 @@ route '/assets/javascripts/*' do
   item.identifier.chop + '.js'
 end
 
-## Blog Rules
-
+# Blog Rules
 compile '/blog/posts/*' do
   filter :kramdown
   layout 'default'
 end
 
+# Misc Rules
 compile '*' do
   if item.binary?
     # don’t filter binary items
@@ -75,10 +74,6 @@ compile '*' do
   end
 end
 
-route '/stylesheet/' do
-  '/style.css'
-end
-
 route '*' do
   if item.binary?
     # Write item with identifier /foo/ to /foo.ext
@@ -88,6 +83,5 @@ route '*' do
     item.identifier + 'index.html'
   end
 end
-
 
 layout '*', :haml

@@ -8,11 +8,11 @@ require 'zurb-foundation'
 include Nanoc::Helpers::Rendering
 include Nanoc::Helpers::Blogging
 
-unless defined? LOADED_DEFAULT_CONFIG
-  LOADED_DEFAULT_CONFIG = true
+#unless defined? LOADED_DEFAULT_CONFIG
+#  LOADED_DEFAULT_CONFIG = true
 
   Compass.add_project_configuration 'compass/config.rb'
-end
-
-
+#end
+#
+#
 

@@ -11,7 +11,6 @@ include Nanoc::Helpers::Blogging
 unless defined? LOADED_DEFAULT_CONFIG
   LOADED_DEFAULT_CONFIG = true
 
-  require 'compass'
   Compass.add_project_configuration 'compass/config.rb'
 end
 

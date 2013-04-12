@@ -2,6 +2,6 @@
   .large-12.columns
     %h2 Blog Archives
     - grouped_articles.each do |yearmonth, articles_this_month|
-      %h2 #{Time.local(0,yearmonth.last).strftime('%B')} #{yearmonth.first}
+      %h2 #{Time.local(yearmonth.first, yearmonth.last).strftime('%Y %B')}
       - articles_this_month.each do |article|
         %h3 #{article[:title]}

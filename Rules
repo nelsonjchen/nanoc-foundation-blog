@@ -21,7 +21,7 @@ preprocess do
 
   # Parse date out of identifier and created_at_time attribute for articles and set it to create_at
   items.select {|item| item.attributes[:kind] == 'article'}.map do |post|
-    year, month, day = /(\d{4})\/(\d+)\/(\d+)/.match(post.identifier).captures
+    year, month, day = /(\d{4})-(\d{1,2})-(\d{1,2})/.match(post.identifier).captures
     post.attributes[:created_at] = Time.parse([[year, month, day].join('-'),
                                                post.attributes[:created_at_time]].join(' '))
   end
@@ -60,7 +60,7 @@ end
 route '/blog/posts/*' do
   created_at = item.attributes[:created_at]
   year, month, day = created_at.year, created_at.month, created_at.day
-  slug = /\d+-(.+)\/$/.match(item.identifier).captures[0]
+  slug = /\d{1,2}-\d{1,2}\/(.+)\/$/.match(item.identifier).captures[0]
   "/blog/posts/#{year}/#{month}/#{day}/#{slug}/index.html"
 end
 

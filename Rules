@@ -60,6 +60,13 @@ compile '/blog/posts/*' do
   layout 'default'
 end
 
+route '/blog/posts/*' do
+  created_at = item.attributes[:created_at]
+  year, month, day = created_at.year, created_at.month, created_at.day
+  slug = /\d+-(.+)\/$/.match(item.identifier).captures[0]
+  "/blog/posts/#{year}/#{month}/#{day}/#{slug}/index.html"
+end
+
 # Misc Rules
 compile '*' do
   if item.binary?

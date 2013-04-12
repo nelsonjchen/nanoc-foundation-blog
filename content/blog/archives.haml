@@ -1,3 +1,7 @@
 .row
   .large-12.columns
     %h2 Blog Archives
+    - grouped_articles.each do |yearmonth, articles_this_month|
+      %h2 #{yearmonth.first} #{yearmonth.last}
+      - articles_this_month.each do |article|
+        %h3 #{article[:title]}

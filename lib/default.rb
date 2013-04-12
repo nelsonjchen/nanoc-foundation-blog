@@ -3,6 +3,7 @@
 
 require 'nanoc/filters/javascript_concatenator'
 include Nanoc::Helpers::Rendering
+include Nanoc::Helpers::Blogging
 
 unless defined? LOADED_DEFAULT_CONFIG
   LOADED_DEFAULT_CONFIG = true
@@ -10,5 +11,6 @@ unless defined? LOADED_DEFAULT_CONFIG
   require 'compass'
   Compass.add_project_configuration 'compass/config.rb'
 end
+
 
 

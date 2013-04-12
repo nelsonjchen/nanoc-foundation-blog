@@ -26,7 +26,6 @@ preprocess do
   items.select {|item| item.attributes[:kind] == 'article'}.map do |post|
     year, month, day = /(\d{4})\/(\d+)\/(\d+)/.match(post.identifier).captures
     post.attributes[:created_at] = Time.parse([[year, month, day].join('-'), post.attributes[:created_at_time]].join(' '))
-
   end
 
 end

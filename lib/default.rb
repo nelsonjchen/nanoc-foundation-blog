@@ -2,6 +2,9 @@
 # before nanoc starts compiling.
 
 require 'nanoc/filters/javascript_concatenator'
+require 'compass'
+require 'zurb-foundation'
+
 include Nanoc::Helpers::Rendering
 include Nanoc::Helpers::Blogging
 

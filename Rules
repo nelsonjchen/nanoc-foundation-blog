@@ -17,7 +17,6 @@ require 'zurb-foundation'
 #   because “*” matches zero or more characters.
 
 preprocess do
-
   # If it's under blog and posts, it is probably an article unless set otherwise.
   items.select {|item| /^\/blog\/posts/.match(item.identifier) }.map do |item|
     item.attributes[:kind] ||= 'article'

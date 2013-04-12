@@ -17,7 +17,18 @@ require 'zurb-foundation'
 #   because “*” matches zero or more characters.
 
 preprocess do
-  items
+
+  # If it's under blog, it is probably an article unless set otherwise.
+  items.select {|item| /^\/blog\/posts/.match(item.identifier) }.map do |item|
+    item.attributes[:kind] ||= 'article'
+  end
+
+  # Parse date out of identifier and created_at_time attribute for articles and set it to create_at
+  items.select {|item| item.attributes[:kind] == 'article'}.map do |post|
+    year, month, day = /(\d{4})\/(\d+)\/(\d+)/.match(post.identifier).captures
+    post.attributes[:created_at] = [[year, month, day].join('-'), post.attributes[:created_at_time]].join(' ')
+  end
+
 end
 
 compile '/assets/stylesheets/*/' do

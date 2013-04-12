@@ -33,3 +33,5 @@ gem 'nanoc-image-compressor'
 gem 'nanoc-javascript-concatenator'
 
 gem 'uglifier'
+
+gem 'rake'

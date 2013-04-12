@@ -16,6 +16,10 @@ require 'zurb-foundation'
 #   item, use the pattern “/about/*/”; “/about/*” will also select the parent,
 #   because “*” matches zero or more characters.
 
+preprocess do
+  items
+end
+
 compile '/assets/stylesheets/*/' do
   filter :sass, Compass.sass_engine_options
 end

@@ -30,6 +30,8 @@ preprocess do
 
 end
 
+# Styling and Javascript Asset Rules
+
 compile '/assets/stylesheets/*/' do
   filter :sass, Compass.sass_engine_options
 end
@@ -38,6 +40,26 @@ compile '/assets/javascripts/*' do
   filter :erb
   filter :concat_js
   #filter :uglify_js
+end
+
+# Do not write partials
+route '/assets/stylesheets/_*/' do
+  nil
+end
+
+route '/assets/stylesheets/*/' do
+  item.identifier.chop + '.css'
+end
+
+route '/assets/javascripts/*' do
+  item.identifier.chop + '.js'
+end
+
+## Blog Rules
+
+compile '/blog/posts/*' do
+  filter :kramdown
+  layout 'default'
 end
 
 compile '*' do
@@ -55,19 +77,6 @@ end
 
 route '/stylesheet/' do
   '/style.css'
-end
-
-# Do not write partials
-route '/assets/stylesheets/_*/' do
-  nil
-end
-
-route '/assets/stylesheets/*/' do
-  item.identifier.chop + '.css'
-end
-
-route '/assets/javascripts/*' do
-  item.identifier.chop + '.js'
 end
 
 route '*' do

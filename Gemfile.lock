@@ -37,6 +37,7 @@ GEM
       progress (~> 2.4.0)
     image_size (1.1.2)
     in_threads (1.1.1)
+    kramdown (1.0.1)
     mime-types (1.22)
     multi_json (1.7.2)
     nanoc (3.6.2)
@@ -72,6 +73,7 @@ DEPENDENCIES
   compass
   fog
   haml
+  kramdown
   mime-types
   nanoc
   nanoc-image-compressor

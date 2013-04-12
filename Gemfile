@@ -35,3 +35,5 @@ gem 'nanoc-javascript-concatenator'
 gem 'uglifier'
 
 gem 'rake'
+
+gem 'kramdown'

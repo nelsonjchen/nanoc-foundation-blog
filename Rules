@@ -64,6 +64,16 @@ route '/blog/posts/*' do
   "/blog/posts/#{year}/#{month}/#{day}/#{slug}/index.html"
 end
 
+## Atom
+compile '/blog/atom/' do
+  filter :haml
+  # No layout
+end
+
+route '/blog/atom/' do
+  '/blog/atom.xml'
+end
+
 # Misc Rules
 compile '*' do
   if item.binary?

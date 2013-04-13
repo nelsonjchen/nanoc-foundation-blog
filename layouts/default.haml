@@ -17,7 +17,16 @@
         %li.name
           %h1
             %a{href: '/'}
-              Nanoc Foundation Blog
+              Nanoc Foundation
+        %li.toggle-topbar.menu-icon
+          %a{href: '#'}
+            Menu
+      %section.top-bar-section
+        %ul.right
+          %li
+            %a{href: '/blog/'} Blog
+          %li
+            %a{href: '/blog/archives/'} Archives
 
     = yield
     :javascript

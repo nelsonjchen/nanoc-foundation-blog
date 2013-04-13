@@ -5,8 +5,10 @@ require 'nanoc/filters/javascript_concatenator'
 require 'compass'
 require 'zurb-foundation'
 
-include Nanoc::Helpers::Rendering
 include Nanoc::Helpers::Blogging
+include Nanoc::Helpers::Tagging
+include Nanoc::Helpers::Rendering
+include Nanoc::Helpers::LinkTo
 
 unless defined? LOADED_DEFAULT_CONFIG
   LOADED_DEFAULT_CONFIG = true

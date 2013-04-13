@@ -54,7 +54,7 @@ end
 # Blog Rules
 compile '/blog/posts/*' do
   filter :kramdown
-  layout 'default'
+  layout 'post'
 end
 
 route '/blog/posts/*' do

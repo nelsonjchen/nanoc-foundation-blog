@@ -1,5 +1,2 @@
 - render 'default' do
-  .row
-    .large-12.columns
-      = yield
-
+  = render 'article', :item => @item, :content => yield

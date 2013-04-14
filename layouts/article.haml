@@ -2,7 +2,8 @@
   .large-12.columns
     %article
       %h1
-        = @item[:title]
+        %a{href: @item.path}
+          = @item[:title]
       %h6
         = "#{@item[:created_at].strftime('%B %d, %Y %l:%M %p %Z')}"
       = @content

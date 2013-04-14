@@ -4,4 +4,7 @@
     - grouped_articles.each do |yearmonth, articles_this_month|
       %h2 #{Time.local(yearmonth.first, yearmonth.last).strftime('%Y %B')}
       - articles_this_month.each do |article|
-        %h3 #{article[:title]} - #{article[:created_at].strftime('%B %d, %Y %l:%M %p %Z')}
+        %h3
+          %a{href: article.path}
+            = article[:title]
+          \- #{article[:created_at].strftime('%B %d, %Y %l:%M %p %Z')}"

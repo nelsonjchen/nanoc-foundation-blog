@@ -56,6 +56,7 @@ end
 # Blog Rules
 compile '/blog/posts/*' do
   filter :erb
+  filter :markdown_code_fence_colorize_adapter
   filter :redcarpet, :options => {fenced_code_blocks: true}
   filter :colorize_syntax, :default_colorizer => :pygmentsrb
   layout 'post'

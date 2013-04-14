@@ -8,7 +8,7 @@ One implementation aspect not seen in any other nanoc project is the lack of
 vendoring of the Foundation gem's Javascripts into the project. This should
 make updating Zurb Foundation as a dependency much easier. Compass already
 handled the SCSS. With a simple off-the-shelf concatenator and some Gem path
-loading, Javascript in gems can be handled too.
+loading, Javascript in gems can be handled too. Also, this project contains a filter to allow Github style fences with the nanoc system.
 
 This nanoc project uses the following posts:
 

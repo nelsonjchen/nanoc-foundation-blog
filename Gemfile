@@ -11,6 +11,10 @@ gem 'builder'
 # nanoc
 gem 'nanoc'
 
+# Third party nanoc addons
+gem 'nanoc-image-compressor'
+gem 'nanoc-javascript-concatenator'
+
 # Zurb Foundation
 gem 'zurb-foundation', '~> 4.1.1'
 
@@ -25,17 +29,15 @@ gem 'rack-rewrite', :require => 'rack/rewrite'
 # Haml
 gem 'haml'
 
-# Deployment to cloud
+# Deployment
 gem 'fog'
 
-gem 'nanoc-image-compressor'
-
-gem 'nanoc-javascript-concatenator'
-
+# Optimization
 gem 'uglifier'
 
-gem 'rake'
-
+# Markdown
 gem 'redcarpet'
 
+# Development
 gem 'faker'
+gem 'rake'

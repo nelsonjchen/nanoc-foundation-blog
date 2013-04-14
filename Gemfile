@@ -38,6 +38,9 @@ gem 'uglifier'
 # Markdown
 gem 'redcarpet'
 
+# Code hilighting
+gem 'pygments.rb'
+
 # Development
 gem 'faker'
 gem 'rake'

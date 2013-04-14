@@ -38,4 +38,4 @@ gem 'rake'
 
 gem 'kramdown'
 
-gem 'lipsum'
+gem 'faker'

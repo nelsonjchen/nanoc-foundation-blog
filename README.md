@@ -12,4 +12,5 @@ off-the-shelf concatenator and some Gem path loading, Javascript in gems can be 
 # Current Status
 
 * Good enough start for a brochure site.
-* Blogging infrastructure in progress.
+* Blogging infrastructure hacked out enough.
+* Work on optimization like using native gems.

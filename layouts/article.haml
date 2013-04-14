@@ -4,5 +4,5 @@
       %h1
         = @item[:title]
       %h6
-        = "Posted at: #{@item[:created_at]}"
+        = "#{@item[:created_at].strftime('%B %d, %Y %l:%M %p %Z')}"
       = @content

@@ -6,4 +6,4 @@
           = @item[:title]
       %h6
         = @item[:created_at].strftime('%B %d, %Y %l:%M %p %Z')
-      = @content
+      = find_and_preserve @content

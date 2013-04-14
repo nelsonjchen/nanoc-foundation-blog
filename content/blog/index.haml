@@ -1,6 +1,11 @@
 .row
   .large-12.columns
-    - sorted_articles.each do |article|
+    - sorted_articles.take(20).each do |article|
       %hr
       = render 'article', :item => article, :content => article.compiled_content
+
+.row
+  .large-12.columns
+    %a.button.expand{href: '/blog/archives/'}
+      Archives
 

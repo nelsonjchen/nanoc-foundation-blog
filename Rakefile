@@ -24,7 +24,7 @@ task :new_post, :title do |t, args|
   end
   puts "Creating new post: #{filename}"
   open(filename, 'w') do |post|
-    post.puts 'New Postra'
+    post.puts 'Put your post stuff in here.'
   end
 end
 

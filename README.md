@@ -28,6 +28,12 @@ have not been added.
 * Clone it.
 * Hack it till you like it.
 
+# Rake Task
+
+```sh
+rake "new_post[Your post title here]"
+```
+
 # Credit
 
 This nanoc project uses the following posts:

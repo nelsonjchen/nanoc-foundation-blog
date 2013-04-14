@@ -36,6 +36,6 @@ gem 'uglifier'
 
 gem 'rake'
 
-gem 'kramdown'
+gem 'redcarpet'
 
 gem 'faker'

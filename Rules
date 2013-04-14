@@ -56,7 +56,7 @@ end
 # Blog Rules
 compile '/blog/posts/*' do
   filter :erb
-  filter :kramdown
+  filter :redcarpet
   layout 'post'
 end
 

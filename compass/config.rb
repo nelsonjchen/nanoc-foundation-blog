@@ -9,3 +9,7 @@ relative_assets = true
 sass_options = {
   syntax: :scss
 }
+
+if ENV['NANOC_ENV'] == 'production'
+  output_style = :compressed
+end

@@ -35,7 +35,9 @@ end
 compile '/assets/javascripts/*' do
   filter :erb
   filter :concat_js
-  #filter :uglify_js
+  if ENV['NANOC_ENV'] == 'production'
+    filter :uglify_js
+  end
 end
 
 ## Do not write partials

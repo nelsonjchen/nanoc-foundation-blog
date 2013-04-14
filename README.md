@@ -21,8 +21,15 @@ I also decided to use some layout scheme that tried to DRY up stuff like post
 rendering and titling of the post files. This may not be enough for everyone
 but I think this is enough for me to hop off and go do my own blog now.
 
+Anyway, that's the idea. Zurb Foundation is used so you can jam your own
+designs in with ease and SCSS. The rest is up to you.
+
 # Current Status
 
 * Good enough start for a brochure site.
-* Blogging infrastructure hacked out enough.
+* Blogging infrastructure hacked out enough. Fill in the rest.
 
+# What you should do with this
+
+* Clone it.
+* Hack it till you like it

@@ -4,6 +4,7 @@
 require 'nanoc/filters/javascript_concatenator'
 require 'compass'
 require 'zurb-foundation'
+require 'faker'
 
 include Nanoc::Helpers::Blogging
 include Nanoc::Helpers::Tagging

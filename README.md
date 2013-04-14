@@ -33,3 +33,4 @@ designs in with ease and SCSS. The rest is up to you.
 
 * Clone it.
 * Hack it till you like it
+

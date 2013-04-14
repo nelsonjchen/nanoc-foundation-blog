@@ -44,3 +44,6 @@ gem 'pygments.rb'
 # Development
 gem 'faker'
 gem 'rake'
+
+# String operations for post creation
+gem 'stringex'

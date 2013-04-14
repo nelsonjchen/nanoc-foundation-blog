@@ -37,3 +37,5 @@ gem 'uglifier'
 gem 'rake'
 
 gem 'kramdown'
+
+gem 'lipsum'

@@ -77,6 +77,16 @@ route '/blog/atom/' do
   '/blog/atom.xml'
 end
 
+## Sitemap
+compile '/sitemap/' do
+  filter :haml
+  # No layout
+end
+
+route '/sitemap/' do
+  '/sitemap.xml'
+end
+
 # Misc Rules
 compile '*' do
   if item.binary?

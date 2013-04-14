@@ -10,6 +10,7 @@ include Nanoc::Helpers::Blogging
 include Nanoc::Helpers::Tagging
 include Nanoc::Helpers::Rendering
 include Nanoc::Helpers::LinkTo
+include Nanoc::Helpers::XMLSitemap
 
 unless defined? LOADED_DEFAULT_CONFIG
   LOADED_DEFAULT_CONFIG = true

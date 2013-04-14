@@ -3,4 +3,6 @@
     %article
       %h1
         = @item[:title]
+      %h6
+        = "Posted at: #{@item[:created_at]}"
       = @content

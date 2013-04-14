@@ -1,5 +1,6 @@
 .row
   .large-12.columns
     - sorted_articles.each do |article|
+      %hr
       = render 'article', :item => article, :content => article.compiled_content
 

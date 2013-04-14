@@ -8,6 +8,7 @@
     %meta{:content => 'width=device-width', :name => 'viewport'}/
     %title
       = " #{@item[:title]} #{'-' if @item[:title]} Foundation 4 "
+    %link{rel: 'alternate', type: 'application/atom+xml', href: '/blog/atom.xml'}
     %link{:href => '/assets/stylesheets/normalize.css', :rel => 'stylesheet'}/
     %link{:href => '/assets/stylesheets/app.css', :rel => 'stylesheet'}/
     %script{:src => '/assets/javascripts/foundation/vendor-custom-modernizr.js'}

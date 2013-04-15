@@ -56,6 +56,8 @@ end
 # Blog Rules
 compile '/blog/posts/*' do
   filter :erb
+  # This is a workaround for not being able to customize how a language is detected with nanoc's
+  # colorize_syntax filter with code fences
   filter :markdown_code_fence_colorize_adapter
   filter :redcarpet, :options => {fenced_code_blocks: true,
                                   autolink: true},

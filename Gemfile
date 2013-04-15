@@ -44,6 +44,9 @@ gem 'pygments.rb'
 # Development
 gem 'faker'
 gem 'rake'
+gem 'guard'
+gem 'guard-nanoc', :git => "https://github.com/nanoc/guard-nanoc.git"
+gem 'rb-fsevent', '~> 0.9'
 
 # String operations for post creation
 gem 'stringex'

@@ -45,6 +45,9 @@ $pre-color: $base1 !default;
 
 pre {
   padding: 0.8em 0 0.8em 0.8em;
+  code {
+    color: $pre-color;
+  }
   color: $pre-color;
   border-color: $pre-border;
   background-color: $pre-bg;

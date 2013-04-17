@@ -22,10 +22,6 @@ gem 'zurb-foundation', '~> 4.1.1'
 gem 'compass'
 gem 'sass'
 
-# Rack for pow
-gem 'rack'
-gem 'rack-rewrite', :require => 'rack/rewrite'
-
 # Haml
 gem 'haml'
 

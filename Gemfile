@@ -16,7 +16,7 @@ gem 'nanoc-image-compressor'
 gem 'nanoc-javascript-concatenator'
 
 # Zurb Foundation
-gem 'zurb-foundation', '~> 4.1.1'
+gem 'zurb-foundation', '~> 4.3.1'
 
 # Compass
 gem 'compass'
